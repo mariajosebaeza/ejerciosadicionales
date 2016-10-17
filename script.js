@@ -132,7 +132,7 @@ function areaTriangulo(){
 //#1 Aprobado o reprobado: Se pide leer tres notas de un alumnos. Obtener su nota en un rango del 1 al 10 y enviar un mensaje donde diga si el alumno aprobó o reprobó el curso (tomar en cuenta que si obtiene 6 o más aprueba, de lo contrario no)
 //Exprese el algoritmo usando pseudocódigo y diagrama de flujos 
 
-function promedioAlumno(){ //se declara la funcion 
+function promedioAlumno(){                                //se declara la funcion 
 	var nota1 = parseInt(prompt("Ingrese primera nota")); // se pide que el usuario ingrese las notas, asi 3 veces 
 	var nota2 = parseInt(prompt("Ingrese segunda nota"));
 	var nota3 = parseInt(prompt("Ingrese tercera nota"));
@@ -144,4 +144,76 @@ function promedioAlumno(){ //se declara la funcion
       	alert("Reprobaste");                            // si el promedio es menor a 6, el alumno reprueba. 
 }
 
-//#4 
+//#2 Cuál es el número más grande ? Se desea implementar un algoritmo para determinar cuál de dos valores proporcionados es el mayor. 
+// Representarlo con pseudocódigo y diagrama de flujo.
+function numeroMayor(){
+	var iNumero1 = parseInt(prompt("Ingrese primer número"));
+	var iNumero2 = parseInt(prompt("Ingrese Segundo número"));
+	if (iNumero1 > iNumero2)
+  		alert(iNumero1 + " es mayor que " + iNumero2);
+	else
+  		alert(iNumero2 + " es mayor que " + iNumero1);
+}
+
+//#4 : Almacenes "El harapiento distinguido" 
+// Almacenes "El harapiento distinguido" tiene una promoción: a todos los trajes que tienen un precio superior a $250.000
+// se les aplicará un descuento de 15% a todos los demás se les aplicará solo 8%
+// Realice un algoritmo para determinar el precio final que debe pagar una persona por comprar un traje 
+// y de cuanto es el descuento que obtendrá.
+// Representelo mediante el pseudocódigo, el diagráma de flujo.
+function descuentoRopa (){
+	var valor = parseInt(prompt("Ingrese el valor de su traje"));
+	if (valor > 250.000)
+		alert("Su descuento es del 15%, el precio final es de $"+valor*0.85);
+	else ( valor < 250.000)
+		alert("Su descuento es del 8%, el precio final es de $"+valor*0.92);
+} 		
+
+//#5 El mayor de los números
+// Se requiere determinar cuál de tres cantidades proporcionadas es la mayor.
+//Realizar su respectivo algoritmo y representarlo mediante un diagrama de flujo y pseudocodigo.
+
+function mayorTres (){
+	var iNumero1 = parseInt(prompt("Ingrese primer número"));
+	var iNumero2 = parseInt(prompt("Ingrese segundo número"));
+	var iNumero3 = parseInt(prompt("Ingrese tercer número"));
+if (numero1 == numero2 && numero1 == numero3){
+   alert("Numero 1, Numero 2 y Numero 3 son iguales y su valor es :  "+ numero1 +" ");
+   }
+   else{
+      if (numero1 > numero2){
+         if (numero1 > numero3){
+            alert("Numero 1 es Mayor y vale: "+ numero1+ " ");
+            }
+            else{
+               alert("Numero 3 es Mayor y vale: "+ numero3 +" ");
+               }
+      }
+      else{
+         if(numero1 < numero2){
+    }
+
+//#9 Hamburguesas "El náufrago satisfecho"
+// ofrece hamburguesas sencillas, dobles y triples, las cuales tienen un costo de $20.00, $25.00 y $28.00 respectivamente.
+//La empresa acepta tarjetas de crédito con cargo de 5% sobre la compra. Suponiendo que los clientes adquieren solo un tip de hamburguesa,
+// realiza un algotirmo para determinar cuánto debe pagar una persona por N hambuguesas.
+//Represéntelo mediante diagrama de flujo y pseudocódigo.
+function descuentoHamburguesa (){
+	var sencilla = 20.00;
+	var doble = 25.00;
+	var triple = 28.00;
+	var tipo = parseInt(prompt("Ingrese tipo de su hambuguesa (sencilla, doble o triple)"));
+	var cantidad = parseInt(prompt("Ingrese la cantidad de hambuguesa"));
+	var total = tipo * cantidad;
+	var pago = prompt("Su pago es con tarjeta de crédito?");
+	if (pago == si)
+		alert("Su cargo es del 5%, el precio final es de $"+ (tipo*cantidad)*0.95);
+	else (pago == no)
+		alert("No tiene cargo en su compra, y el precio final es de $ " + total );
+}
+
+
+
+
+
+
