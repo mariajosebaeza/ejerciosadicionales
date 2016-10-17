@@ -90,19 +90,58 @@ function contadores(){
 	var primero = numero + 5;
 	var segundo = primero + 21;
 	var tercero = segundo - 4;
-	alert(" El número introducido " + numero +  "\nContadores  " + primero + "	" + segundo + " 	" + tercero);
+	alert(" El número introducido " + numero +  "\nContadores  " + primero + "	 " + segundo + "   " + tercero);
 }
 
 
 //#5 Producto escalar
-// Haz un programa que sirva para calcular el producto escalar de dos vectores del plano. La forma de calcularlo es la siguiente: U*V=(u1*v1)+(u2*v2)
-//Ejemplo: El producto escalar de los vectores se calcula asi: (-2,3)*(5,-2)=(-2*5)+(3*-2)= -10 -6= -16
-//La "Salida" ha de ser de la siguiente forma: comprueba el funcionamiento del programa usando el caso concreto que aparece en la ilustración.
+// Haz un programa que sirva para calcular el producto escalar de dos vectores del plano. 
+//La forma de calcularlo es la siguiente: U*V=(u1*v1)+(u2*v2)
+//Ejemplo: El producto escalar de los vectores se calcula asi: 
+//(-2,3)*(5,-2)=(-2*5)+(3*-2)= -10 -6= -16
+//La "Salida" ha de ser de la siguiente forma: comprueba el 
+//funcionamiento del programa usando el caso concreto que aparece en la ilustración.
 //El producto escalar de los vectores: 
 //(-2, 2) y (5,-2)es -16
-
+function productoEscalar(){
+	var u1 = parseInt(prompt("Ingrese el primer número del vector 1"));
+	var v1 = parseInt(prompt("Ingrese el segundo número del vector 1"));
+	var u2 = parseInt(prompt("Ingrese el primer número del vector 2"));
+	var v2 = parseInt(prompt("Ingrese el segundo número del vector 2"));
+	var aux = (u1*v1)+(u2*v2);
+	alert("El producto escalar de los vectores ("+u1+", "+v1+") y ("+u2+", "+v2+") es "+aux);
+}
 
 
 // #7 Área del circulo : haz un programa que calcule el área de un circulo. 
+function areaCirculo(){
+	var radio = parseInt(prompt("Ingrese el radio del circulo"));
+	var resultado = Math.PI * (radio * radio);
+	alert("El area del circulo es " + resultado);
+}
 
+//#8 Área del triangulo: Corrige el programa y explica para que sirve
+function areaTriangulo(){
+	var a,b;
+	a= parseInt(prompt("Ingrese la altura del triángulo")); //acá debe ir parseInt para cambiar el string por número, y además falta el ";"
+	b= parseInt(prompt("Ingrese la base del triángulo")); // igual que arriba, falta parseInt y ";"
+	alert("El área del triángulo es " + (a*b/2)); // faltaba un parentésis para cerrar el alert
+}
 
+//Ejercicios Condicionales 
+//#1 Aprobado o reprobado: Se pide leer tres notas de un alumnos. Obtener su nota en un rango del 1 al 10 y enviar un mensaje donde diga si el alumno aprobó o reprobó el curso (tomar en cuenta que si obtiene 6 o más aprueba, de lo contrario no)
+//Exprese el algoritmo usando pseudocódigo y diagrama de flujos 
+
+function promedioAlumno(){ //se declara la funcion 
+	var nota1 = parseInt(prompt("Ingrese primera nota")); // se pide que el usuario ingrese las notas, asi 3 veces 
+	var nota2 = parseInt(prompt("Ingrese segunda nota"));
+	var nota3 = parseInt(prompt("Ingrese tercera nota"));
+	var suma = nota1 + nota2 + nota3;                    // primero se suman dichas notas
+	var promedio = suma /3;			                    // el promedio será el resultado de la suma dividido por la cantidad de números, en este caso 3.
+	if (promedio >= 6)                                  // si el promedio es mayor o igual a 6, el alumno aprueba 
+   	    alert("Aprobaste");
+    else 
+      	alert("Reprobaste");                            // si el promedio es menor a 6, el alumno reprueba. 
+}
+
+//#4 
